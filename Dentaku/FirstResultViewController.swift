@@ -13,30 +13,42 @@ import LTMorphingLabel
 
 class FirstResultViewController: UIViewController {
     var audioPlayer:AVAudioPlayer!
-    @IBOutlet weak var highScoreLabel: UILabel!
-    @IBOutlet weak var lastScoreLabel: UILabel!
     
-    @IBOutlet weak var highScoreTextLabel: UILabel!
+    @IBOutlet weak var lastScoreLabel: LTMorphingLabel!
     
-    @IBOutlet weak var lastScoreTextLabel: UILabel!
+    
+    @IBOutlet weak var lastScoreTextLabel: LTMorphingLabel!
     
     @IBOutlet weak var rankLabel: LTMorphingLabel!
     
+    @IBOutlet weak var rankTextLabel: LTMorphingLabel!
+    
+    @IBOutlet weak var shareTextLabel: LTMorphingLabel!
     
     var timerArray = [Double]()
     var highTimerArray = [Double]()
     var firstQuestionNumArray = [Int]()
-    var lastScore:Double = 0.0
-    var highScore:Double = 0.0
+    var lastTime:Double = 0.0
+    var highTime:Double = 0.0
     
+    var rankResault:String!
     var rank:Double = 0
     
     var effectTimer:Timer?
+    var index:Int = 0
+    
+    //var rankText = ["○❓△Rank","○❓△rank","○❓△RANK"]
+    
+    let ud = UserDefaults.standard
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //LTMorphing
         rankLabel.morphingEffect = .burn
+        rankTextLabel.morphingEffect = .fall
+        lastScoreTextLabel.morphingEffect = .sparkle
+        lastScoreLabel.morphingEffect = .sparkle
+        shareTextLabel.morphingEffect = .pixelate
         
         do {
             let filePath = Bundle.main.path(forResource: "goal",ofType: "mp3")
@@ -48,138 +60,102 @@ class FirstResultViewController: UIViewController {
         }
         audioPlayer.play()
         
+        
+        ///lastScoreというキー値で保存された、配列timerArrayを取り出す
+        if ud.object(forKey: "lastScore") != nil{
+            timerArray = ud.object(forKey: "lastScore") as! [Double]
+            lastTime = timerArray[0]
+            lastScoreTextLabel.text = String(lastTime)
+        }
+        rankQuestion()
     }
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-       
+        effectTimer = Timer.scheduledTimer(timeInterval: 3.0,
+                                           target: self,
+                                           selector: #selector(updateLabel(timer:)), userInfo: nil,
+                                           repeats: true)
+        effectTimer?.fire()
     }
+    
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
+        effectTimer?.invalidate()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    @objc func updateLabel(timer: Timer) {
+       // rankTextLabel.text = rankText[index]
+        rankLabel.text = rankResault
+        
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        //lastScoreというキー値で保存された、配列timerArrayを取り出す
-        if UserDefaults.standard.object(forKey: "lastScore") != nil{
-            timerArray = UserDefaults.standard.object(forKey: "lastScore") as! [Double]
-            if UserDefaults.standard.object(forKey: "highScore") != nil{
-                //highScoreあったら
-                highTimerArray = UserDefaults.standard.object(forKey: "highScore") as! [Double]
-                //print(highTimerArray)
-                print(highScore)
-               checkHighScore()
-                
-            }else{
-                //highScoreなかったら
-                highScore = 0.0
-                
-               checkHighScore()
-            
-            }
-            rankQuestion()
-        }
-    }
-    //hightimeCheck
-    @objc func checkHighScore(){
-        lastScore = timerArray[0]
-        lastScoreTextLabel.text = String(lastScore)
-        //print(highTimerArray)
-        //print(highTimerArray[0])
-        
-        //                highScore = highTimerArray[0]
-        
-        
-        if highScore != 0.0{
-            //2回目以降
-            if highScore > lastScore{
-                highScore = lastScore
-            }else{
-                print(highScore)
-                highScoreTextLabel.text = String(highScore)
-                
-            }
-        }else{
-            
-            //highScore=0 -> 最初
-            highScore = lastScore
-            highScoreTextLabel.text = String(highScore)
-        }
-        
-       // highScoreTextLabel.text = String(highScore)
-        
-        //textFieldで記入されたテキストを入れる
-        highTimerArray.append(Double(highScore))
-        
-        //キー値"array"で配列の保存
-        UserDefaults.standard.set(highTimerArray, forKey: "highScore")
-        
-        
-    }
-        
-        //rankを計算する
-        
-
+    
     func rankQuestion(){
         if UserDefaults.standard.object(forKey: "firstQuestionsNum") != nil{
-            firstQuestionNumArray = UserDefaults.standard.object(forKey: "firstQuestionsNum") as! [Int]
-           
+            firstQuestionNumArray = ud.object(forKey: "firstQuestionsNum") as! [Int]
+            
             rankCheck()
-        UserDefaults.standard.removeObject(forKey: "firstQuestionsNum")
-        
-        /*    問題と解答を削除したので、キーが"questions"のオブジェクトの値がnilになる
-         *  -> 読み込まれたときのエラーを回避するために値に空の配列を入れておく
-         */
-        UserDefaults.standard.set([], forKey: "firstQuestionsNum")
-    }
+            ud.removeObject(forKey: "firstQuestionsNum")
+            
+            /*    問題と解答を削除したので、キーが"questions"のオブジェクトの値がnilになる
+             *  -> 読み込まれたときのエラーを回避するために値に空の配列を入れておく
+             */
+            ud.set([], forKey: "firstQuestionsNum")
+        }
     }
     func rankCheck(){
-        rank = lastScore/Double(firstQuestionNumArray[0])
+        rank = lastTime/Double(firstQuestionNumArray[0])
         switch rank {
         case 0..<1.0:
             rankLabel.textColor = UIColor.blue
-            rankLabel.text = "Super"
+            rankResault = "SS"
         case 1.0..<1.5:
             rankLabel.textColor = UIColor.purple
-            rankLabel.text = "Greate!"
+            rankResault = "SS"
         case 1.5..<1.8:
             rankLabel.textColor = UIColor.orange
-            rankLabel.text = "Good!"
+            rankResault = "S"
         case 1.8..<2.0:
             rankLabel.textColor = UIColor.yellow
-            rankLabel.text = "SS"
+            rankResault = "A"
         case 2.0..<2.3:
             rankLabel.textColor = UIColor.yellow
-            rankLabel.text = "S"
+            rankResault = "B"
         case 2.3..<2.5:
             rankLabel.textColor = UIColor.yellow
-            rankLabel.text = "A"
+            rankResault = "C"
         case 2.5..<2.8:
             rankLabel.textColor = UIColor.red
-            rankLabel.text = "B"
+            rankResault = "D"
         case 2.8..<3.0:
             rankLabel.textColor = UIColor.red
-            rankLabel.text = "C"
+            rankResault = "E"
         case 3.0..<3.3:
             rankLabel.textColor = UIColor.red
-            rankLabel.text = "D"
+            rankResault = "F"
         case 3.3..<3.5:
             rankLabel.textColor = UIColor.magenta
-            rankLabel.text = "E"
+            rankResault = "G"
             
         default:
-            rankLabel.textColor = UIColor.black
-            rankLabel.text = "Z"
+            rankLabel.textColor = UIColor.magenta
+            rankResault = "Z"
             
         }
+        rankLabel.text = rankResault
     }
-    
+
+
     
     @IBAction func backButton(_ sender: Any) {
-         self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+        self.performSegue(withIdentifier: "toReset", sender: nil)
         
     }
     @IBAction func TweetButton(sender: UIButton) {
@@ -200,6 +176,8 @@ class FirstResultViewController: UIViewController {
         
         self.present(composeViewController, animated: true, completion: nil)
     }
-
-   
+    
+    
+    
 }
+

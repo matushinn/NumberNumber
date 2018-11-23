@@ -14,8 +14,8 @@
 		3716FB902197A0AC00BE2923 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716FB8F2197A0AC00BE2923 /* StartViewController.swift */; };
 		3718027F21A7A2F900EE1A34 /* goal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3718027E21A7A2F900EE1A34 /* goal.mp3 */; };
 		3718028121A7A30A00EE1A34 /* sentou.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3718028021A7A30A00EE1A34 /* sentou.mp3 */; };
-		3718028321A7A31400EE1A34 /* bgm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3718028221A7A31400EE1A34 /* bgm.mp3 */; };
 		3718028521A7AD8700EE1A34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3718028421A7AD8700EE1A34 /* ViewController.swift */; };
+		3718028F21A8228B00EE1A34 /* bgm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3718028E21A8228B00EE1A34 /* bgm.mp3 */; };
 		371F32E421944F87008B38A4 /* SecondResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371F32E321944F87008B38A4 /* SecondResultViewController.swift */; };
 		375198B12185496F00C02861 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375198B02185496F00C02861 /* AppDelegate.swift */; };
 		375198B32185496F00C02861 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375198B22185496F00C02861 /* FirstViewController.swift */; };
@@ -35,8 +35,8 @@
 		3716FB8F2197A0AC00BE2923 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		3718027E21A7A2F900EE1A34 /* goal.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = goal.mp3; path = "../../../Downloads/3DMaze20171009 (2) 2/Assets/Sounds/goal.mp3"; sourceTree = "<group>"; };
 		3718028021A7A30A00EE1A34 /* sentou.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sentou.mp3; path = ../../../Downloads/sentou.mp3; sourceTree = "<group>"; };
-		3718028221A7A31400EE1A34 /* bgm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bgm.mp3; path = ../../../Downloads/bgm.mp3; sourceTree = "<group>"; };
 		3718028421A7AD8700EE1A34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3718028E21A8228B00EE1A34 /* bgm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bgm.mp3; path = "../../../Downloads/3DMaze20171009 (2)/Assets/Sounds/bgm.mp3"; sourceTree = "<group>"; };
 		371F32E321944F87008B38A4 /* SecondResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondResultViewController.swift; sourceTree = "<group>"; };
 		375198AD2185496F00C02861 /* Dentaku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dentaku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		375198B02185496F00C02861 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				3716FB8F2197A0AC00BE2923 /* StartViewController.swift */,
+				3718028421A7AD8700EE1A34 /* ViewController.swift */,
 				375198B22185496F00C02861 /* FirstViewController.swift */,
 				37127C7F219E4F6C002DBAEA /* FirstResultViewController.swift */,
 				376972A4219A5FEA00329A7F /* SecondViewController.swift */,
@@ -107,12 +108,11 @@
 				375198B02185496F00C02861 /* AppDelegate.swift */,
 				375198B42185496F00C02861 /* Main.storyboard */,
 				3718028021A7A30A00EE1A34 /* sentou.mp3 */,
-				3718028221A7A31400EE1A34 /* bgm.mp3 */,
+				3718028E21A8228B00EE1A34 /* bgm.mp3 */,
 				3718027E21A7A2F900EE1A34 /* goal.mp3 */,
 				375198B72185497000C02861 /* Assets.xcassets */,
 				375198B92185497000C02861 /* LaunchScreen.storyboard */,
 				375198BC2185497000C02861 /* Info.plist */,
-				3718028421A7AD8700EE1A34 /* ViewController.swift */,
 			);
 			path = Dentaku;
 			sourceTree = "<group>";
@@ -187,9 +187,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				375198BB2185497000C02861 /* LaunchScreen.storyboard in Resources */,
-				3718028321A7A31400EE1A34 /* bgm.mp3 in Resources */,
 				3718027F21A7A2F900EE1A34 /* goal.mp3 in Resources */,
 				375198B82185497000C02861 /* Assets.xcassets in Resources */,
+				3718028F21A8228B00EE1A34 /* bgm.mp3 in Resources */,
 				375198B62185496F00C02861 /* Main.storyboard in Resources */,
 				3718028121A7A30A00EE1A34 /* sentou.mp3 in Resources */,
 			);

@@ -26,9 +26,9 @@ class FirstViewController: UIViewController {
     
     @IBOutlet weak var questionNumLabel: LTMorphingLabel!
     
+    @IBOutlet weak var explanationLabel: LTMorphingLabel!
     
-    @IBOutlet weak var startButtonLabel: UIButton!
-    
+   
     @IBOutlet weak var maruImageView: UIImageView!
     
     @IBOutlet weak var batuImageView: UIImageView!
@@ -441,19 +441,11 @@ class FirstViewController: UIViewController {
         timerLabel.morphingEffect = .fall
         questionNumLabel.morphingEffect = .pixelate
         answerLabel.morphingEffect = .evaporate
+        explanationLabel.morphingEffect = .pixelate
         
     }
     
     
-    @IBAction func startButton(_ sender: Any) {
-        noteViewLabel.alpha=0.0
-        noteTextViewLabel.alpha=0.0
-        startButtonLabel.isHidden = true
-        startTimer()
-       
-        audioPlayer.play()
-        
-    }
     
     @IBAction func cancelButton(_ sender: Any) {
         audioPlayer.stop()

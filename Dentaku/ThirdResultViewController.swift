@@ -9,6 +9,7 @@
 import UIKit
 import Social
 import AVFoundation
+import LTMorphingLabel
 
 class ThirdResultViewController: UIViewController {
     var audioPlayer:AVAudioPlayer!
@@ -21,7 +22,7 @@ class ThirdResultViewController: UIViewController {
     @IBOutlet weak var lastScoreTextLabel: UILabel!
     
     
-    @IBOutlet weak var rankLabel: UILabel!
+    @IBOutlet weak var rankLabel:LTMorphingLabel!
     
     var timerArray = [Double]()
     var highTimerArray = [Double]()

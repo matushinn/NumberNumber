@@ -7,24 +7,56 @@
 //
 
 import UIKit
+import LTMorphingLabel
 
 class ViewController: UIViewController {
     
+    var effectTimer:Timer?
+    var index:Int = 0
+    
     @IBOutlet var modeButtons: [UIButton]!
     
+    @IBOutlet weak var titleLabel: LTMorphingLabel!
     
+    let text = ["Time attack","Time Attack","time attack"]
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        titleLabel.morphingEffect = .fall
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        effectTimer = Timer.scheduledTimer(timeInterval: 3.0,
+                                           target: self,
+                                           selector: #selector(updateLabel(timer:)), userInfo: nil,
+                                           repeats: true)
+        effectTimer?.fire()
+    }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        effectTimer?.invalidate()
+    }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    @objc func updateLabel(timer: Timer) {
+        titleLabel.text = text[index]
+        
+        index += 1
+        if index >= text.count {
+            index = 0
+        }
+        
+        
+    }
     
     @IBAction func tappedModeButton(_ sender: UIButton) {
-      //  let firstVC = self.storyboard?.instantiateViewController(withIdentifier: "FirstVC") as! FirstViewController
-        
+      
         switch sender.tag {
         case 0 :
             //firstVC.modeNum = 0

@@ -20,7 +20,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="suuzi1" translatesAutoresizingMaskIntoConstraints="NO" id="SK9-qk-AD9">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34F-Zb-eQQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34F-Zb-eQQ" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
                                 <rect key="frame" x="0.0" y="18" width="375" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -28,40 +28,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O84-Jc-LgU">
-                                <rect key="frame" x="0.0" y="264" width="375" height="89"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O84-Jc-LgU" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                                <rect key="frame" x="0.0" y="303" width="375" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="74"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="❓" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bX-YN-KYS">
-                                <rect key="frame" x="144" y="99" width="87" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="62"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ky3-Ja-s7E">
-                                <rect key="frame" x="49" y="146" width="87" height="80"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ky3-Ja-s7E" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                                <rect key="frame" x="49" y="159" width="87" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="110"/>
                                 <color key="textColor" red="0.0" green="0.19950138100000001" blue="0.96620899439999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="×" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erU-pm-VRb">
-                                <rect key="frame" x="239" y="146" width="87" height="80"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="×" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erU-pm-VRb" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                                <rect key="frame" x="239" y="159" width="87" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="110"/>
                                 <color key="textColor" red="0.99222001869999998" green="1" blue="0.031491007049999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCA-aZ-6CE">
-                                <rect key="frame" x="144" y="195" width="87" height="80"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCA-aZ-6CE" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                                <rect key="frame" x="144" y="234" width="87" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="110"/>
@@ -80,6 +72,14 @@
                                     <action selector="timeAttackButton:" destination="InL-9t-DfM" eventType="touchUpInside" id="qsY-s0-aS5"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="❓" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bX-YN-KYS" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                                <rect key="frame" x="144" y="111" width="87" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="62"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -91,6 +91,12 @@
                         <viewLayoutGuide key="safeArea" id="glf-aS-acN"/>
                     </view>
                     <connections>
+                        <outlet property="calLabel1" destination="1bX-YN-KYS" id="KSR-lF-S63"/>
+                        <outlet property="calLabel2" destination="Ky3-Ja-s7E" id="2Ag-IU-ks8"/>
+                        <outlet property="calLabel3" destination="gCA-aZ-6CE" id="vUg-SW-ggD"/>
+                        <outlet property="calLabel4" destination="erU-pm-VRb" id="Hth-GN-r0t"/>
+                        <outlet property="lowNumberLabel" destination="O84-Jc-LgU" id="Zpe-tV-6jK"/>
+                        <outlet property="upNumberLabel" destination="34F-Zb-eQQ" id="Yie-LE-hRc"/>
                         <segue destination="y4y-xZ-vLX" kind="show" identifier="toTimeAttack" id="hei-Hz-xRq"/>
                     </connections>
                 </viewController>
@@ -122,7 +128,7 @@
                                     <action selector="tappedModeButton:" destination="y4y-xZ-vLX" eventType="touchUpInside" id="1gb-SM-MV2"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time attack" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BP9-ya-5KM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time attack" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BP9-ya-5KM" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -159,6 +165,7 @@
                         <viewLayoutGuide key="safeArea" id="mdb-Wl-46Y"/>
                     </view>
                     <connections>
+                        <outlet property="titleLabel" destination="BP9-ya-5KM" id="ecg-uN-l4U"/>
                         <outletCollection property="modeButtons" destination="bNX-Pd-aab" collectionClass="NSMutableArray" id="26o-tH-oiH"/>
                         <outletCollection property="modeButtons" destination="8DM-oN-CGJ" collectionClass="NSMutableArray" id="lmR-Xp-hf0"/>
                         <outletCollection property="modeButtons" destination="9eT-0N-llm" collectionClass="NSMutableArray" id="Q3O-3E-EXe"/>
@@ -182,7 +189,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="haiiro3" translatesAutoresizingMaskIntoConstraints="NO" id="Qhr-63-Zcw">
                                 <rect key="frame" x="1" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r85-po-Ilb" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r85-po-Ilb" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
                                 <rect key="frame" x="87" y="269" width="211" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -453,7 +460,7 @@
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="34"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The number of questions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSf-HH-5Wp">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The number of questions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSf-HH-5Wp" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
                                         <rect key="frame" x="0.0" y="240" width="376" height="96"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -490,17 +497,17 @@
                         <outlet property="answerLabel" destination="r85-po-Ilb" id="7mf-GH-iAh"/>
                         <outlet property="batuImageView" destination="ipz-f4-MmO" id="X0R-kd-dUq"/>
                         <outlet property="calcLabel" destination="dK7-Bg-JSY" id="pDl-SX-fBT"/>
+                        <outlet property="explanationLabel" destination="KSf-HH-5Wp" id="KKX-el-pud"/>
                         <outlet property="leftLabel" destination="1KB-h7-Ac3" id="saj-Ze-9q1"/>
                         <outlet property="maruImageView" destination="mmu-0G-obg" id="RLx-Sb-1DV"/>
-                        <outlet property="noteTextViewLabel" destination="ZAH-Xh-gkF" id="iFW-JU-3vB"/>
+                        <outlet property="noteTextViewLabel" destination="ZAH-Xh-gkF" id="1FC-HW-y3w"/>
                         <outlet property="noteViewLabel" destination="dfL-5W-DW6" id="wgI-Z7-6c1"/>
                         <outlet property="questionNumLabel" destination="HI4-Yj-4Nq" id="gE8-d8-UAf"/>
-                        <outlet property="questions10ButtonLabel" destination="tBc-lX-eIT" id="lcK-Pn-2fa"/>
-                        <outlet property="questions20ButtonLabel" destination="WJa-iy-HJm" id="PI5-hU-wNi"/>
-                        <outlet property="questions30ButtonLabel" destination="Qxe-H0-rAl" id="wVz-DB-yhc"/>
-                        <outlet property="randomQuestionsButtonLabel" destination="mhu-2p-hUN" id="FaU-nO-SII"/>
+                        <outlet property="questions10ButtonLabel" destination="tBc-lX-eIT" id="1pJ-Wc-NxP"/>
+                        <outlet property="questions20ButtonLabel" destination="WJa-iy-HJm" id="LND-Tt-dA4"/>
+                        <outlet property="questions30ButtonLabel" destination="Qxe-H0-rAl" id="8yI-MG-Bd4"/>
+                        <outlet property="randomQuestionsButtonLabel" destination="mhu-2p-hUN" id="y8y-4g-BAm"/>
                         <outlet property="rightLabel" destination="4Jd-Kv-Sfe" id="Ofq-DP-RW4"/>
-                        <outlet property="startButtonLabel" destination="tBc-lX-eIT" id="LlD-lT-Lgi"/>
                         <outlet property="timerLabel" destination="Eed-RC-ZqA" id="Ker-Pb-dPv"/>
                         <segue destination="qMH-qq-A8u" kind="show" identifier="toFirstResult" id="G3O-we-1Rn"/>
                     </connections>
@@ -521,35 +528,19 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kzh-99-9Ko">
-                                <rect key="frame" x="0.0" y="380" width="218" height="90"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kzh-99-9Ko" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                                <rect key="frame" x="0.0" y="377" width="188" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="48"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="High Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAw-FF-cCG">
-                                <rect key="frame" x="0.0" y="245" width="218" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="48"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZwU-ge-R1W">
-                                <rect key="frame" x="243" y="380" width="132" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="47"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpw-cc-XTd">
-                                <rect key="frame" x="90" y="487" width="197" height="81"/>
+                                <rect key="frame" x="0.0" y="0.0" width="91" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="48"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="26"/>
                                 <state key="normal" title="Back!!">
                                     <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -564,28 +555,36 @@
                                 <state key="normal" image="facebook"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkP-k1-EZC">
-                                <rect key="frame" x="72" y="576" width="96" height="71"/>
+                                <rect key="frame" x="92" y="576" width="96" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Twitter_Bird.svg"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xgy-cb-MtV" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
-                                <rect key="frame" x="107" y="74" width="163" height="163"/>
+                                <rect key="frame" x="106" y="74" width="163" height="163"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="100"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="○❓△ rank" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tdv-De-HJx">
-                                <rect key="frame" x="16" y="16" width="343" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="○❓△ rank" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tdv-De-HJx" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                                <rect key="frame" x="16" y="272" width="343" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="38"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQA-J9-l8X">
-                                <rect key="frame" x="243" y="244" width="132" height="90"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="share share!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7X-8O-k7g" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                                <rect key="frame" x="0.0" y="505" width="219" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" red="0.0" green="0.19950138100000001" blue="0.96620899439999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZwU-ge-R1W" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                                <rect key="frame" x="243" y="376" width="132" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="47"/>
@@ -603,11 +602,12 @@
                         <viewLayoutGuide key="safeArea" id="2yf-kS-RY8"/>
                     </view>
                     <connections>
-                        <outlet property="highScoreLabel" destination="FAw-FF-cCG" id="lId-mj-Ff9"/>
-                        <outlet property="highScoreTextLabel" destination="YQA-J9-l8X" id="EaG-XA-KH0"/>
-                        <outlet property="lastScoreLabel" destination="Kzh-99-9Ko" id="lpI-ig-kEV"/>
-                        <outlet property="lastScoreTextLabel" destination="ZwU-ge-R1W" id="hau-Fb-jO3"/>
+                        <outlet property="lastScoreLabel" destination="Kzh-99-9Ko" id="wvi-hr-guG"/>
+                        <outlet property="lastScoreTextLabel" destination="ZwU-ge-R1W" id="o5n-JV-Z7l"/>
                         <outlet property="rankLabel" destination="Xgy-cb-MtV" id="Zvl-wr-QcI"/>
+                        <outlet property="rankTextLabel" destination="Tdv-De-HJx" id="kpj-m7-5Nm"/>
+                        <outlet property="shareTextLabel" destination="h7X-8O-k7g" id="vCf-zU-QfI"/>
+                        <segue destination="InL-9t-DfM" kind="presentation" identifier="toReset" id="q8e-1z-aQy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Irj-Mv-eYj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -770,7 +770,7 @@
                                     <action selector="nineButton:" destination="T39-f2-yVi" eventType="touchUpInside" id="GlN-hI-Ye4"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jjr-Ol-H8P">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jjr-Ol-H8P" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
                                 <rect key="frame" x="70" y="255" width="211" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -789,14 +789,14 @@
                                     <action selector="okButton:" destination="T39-f2-yVi" eventType="touchUpInside" id="yNg-II-Prq"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLe-VO-gCF">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLe-VO-gCF" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
                                 <rect key="frame" x="145" y="162" width="85" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="81"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VpR-wC-yue">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VpR-wC-yue" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
                                 <rect key="frame" x="229" y="71" width="123" height="98"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -804,7 +804,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eu4-XS-gAl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eu4-XS-gAl" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
                                 <rect key="frame" x="37" y="70" width="128" height="98"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -812,7 +812,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CSL-cZ-01u">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CSL-cZ-01u" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
                                 <rect key="frame" x="127" y="21" width="120" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -834,7 +834,7 @@
                                     <segue destination="InL-9t-DfM" kind="show" id="Foh-iV-TxL"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBP-nG-K7I">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBP-nG-K7I" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
                                 <rect key="frame" x="295" y="13" width="80" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -890,7 +890,7 @@
                                             <action selector="questions30Button:" destination="T39-f2-yVi" eventType="touchUpInside" id="KrM-0h-nlY"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The number of questions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNi-5B-ucW">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The number of questions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNi-5B-ucW" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
                                         <rect key="frame" x="0.0" y="237" width="376" height="96"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -911,7 +911,7 @@
                                         </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.89999997615814209" contentMode="scaleToFill" fixedFrame="YES" text="It does not end the problem until the correct answer" translatesAutoresizingMaskIntoConstraints="NO" id="cZs-SF-Etl">
-                                        <rect key="frame" x="8" y="34" width="376" height="172"/>
+                                        <rect key="frame" x="-1" y="57" width="376" height="172"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="34"/>
@@ -925,10 +925,11 @@
                         <viewLayoutGuide key="safeArea" id="0sN-4d-v1J"/>
                     </view>
                     <connections>
-                        <outlet property="answerLabel" destination="Jjr-Ol-H8P" id="KBx-yx-tGc"/>
+                        <outlet property="answerLabel" destination="Jjr-Ol-H8P" id="ZaS-3T-hV3"/>
                         <outlet property="batsuImageView" destination="7t3-ki-oIM" id="c2U-uX-g37"/>
-                        <outlet property="calcLabel" destination="QLe-VO-gCF" id="uH6-pj-tvK"/>
-                        <outlet property="leftLabel" destination="eu4-XS-gAl" id="qu9-7Q-ROq"/>
+                        <outlet property="calcLabel" destination="QLe-VO-gCF" id="ssK-vR-0uu"/>
+                        <outlet property="explanationLabel" destination="jNi-5B-ucW" id="Wpv-7c-bq8"/>
+                        <outlet property="leftLabel" destination="eu4-XS-gAl" id="Dm2-Rc-1lU"/>
                         <outlet property="maruImageView" destination="QSz-3U-6yr" id="Dd3-gQ-3wY"/>
                         <outlet property="noteTextViewLabel" destination="cZs-SF-Etl" id="ows-3b-DrC"/>
                         <outlet property="noteViewLabel" destination="RC0-6e-BOw" id="7cI-zO-xQe"/>
@@ -937,8 +938,8 @@
                         <outlet property="questions20ButtonLabel" destination="Bci-Bc-Oaf" id="68H-NA-CXy"/>
                         <outlet property="questions30ButtonLabel" destination="fkO-5E-o7x" id="gXD-R9-Com"/>
                         <outlet property="randomQuestionsButtonLabel" destination="cDI-di-7Q5" id="Wgy-Qs-8t9"/>
-                        <outlet property="rightLabel" destination="VpR-wC-yue" id="J9d-ws-vTS"/>
-                        <outlet property="timerLabel" destination="CSL-cZ-01u" id="prT-uJ-sPl"/>
+                        <outlet property="rightLabel" destination="VpR-wC-yue" id="Mks-RP-7YC"/>
+                        <outlet property="timerLabel" destination="CSL-cZ-01u" id="dCW-I4-Rcv"/>
                         <segue destination="zQp-Mx-FMb" kind="presentation" identifier="toSecondResult" id="1wn-BM-fD3"/>
                     </connections>
                 </viewController>
@@ -958,7 +959,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IG0-tH-83v">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IG0-tH-83v" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
                                 <rect key="frame" x="82" y="258" width="211" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1121,14 +1122,14 @@
                                     <action selector="okButton:" destination="rPf-iB-3Xm" eventType="touchUpInside" id="REV-Og-2dj"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAd-TT-dH3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAd-TT-dH3" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
                                 <rect key="frame" x="146" y="174" width="82" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="95"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43Z-WS-KcH">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43Z-WS-KcH" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
                                 <rect key="frame" x="16" y="78" width="128" height="98"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1136,7 +1137,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBk-J0-t0h">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBk-J0-t0h" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
                                 <rect key="frame" x="236" y="78" width="123" height="98"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1157,7 +1158,7 @@
                                     <segue destination="InL-9t-DfM" kind="show" id="mV2-X9-xGY"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBD-ak-9R5">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBD-ak-9R5" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
                                 <rect key="frame" x="305" y="20" width="80" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1165,7 +1166,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3x6-Pg-6ua">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3x6-Pg-6ua" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
                                 <rect key="frame" x="127" y="20" width="120" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1183,7 +1184,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view alpha="0.89999997615814209" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Avn-fd-vTx">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="5" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.89999997615814209" contentMode="scaleToFill" fixedFrame="YES" text="It does not end the problem until the correct answer" translatesAutoresizingMaskIntoConstraints="NO" id="cU5-OU-Dat">
@@ -1193,7 +1194,7 @@
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="34"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The number of questions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g24-1M-rmQ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The number of questions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g24-1M-rmQ" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
                                         <rect key="frame" x="0.0" y="244" width="376" height="96"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1257,20 +1258,21 @@
                         <viewLayoutGuide key="safeArea" id="n85-kC-lSf"/>
                     </view>
                     <connections>
-                        <outlet property="answerLabel" destination="IG0-tH-83v" id="bSg-hh-she"/>
+                        <outlet property="answerLabel" destination="IG0-tH-83v" id="uVi-CF-Y8y"/>
                         <outlet property="batsuImageView" destination="PE3-qH-gSC" id="wEG-LK-GIp"/>
-                        <outlet property="calcLabel" destination="cAd-TT-dH3" id="uq4-99-VjX"/>
-                        <outlet property="leftLabel" destination="43Z-WS-KcH" id="8dm-Ba-JzC"/>
+                        <outlet property="calcLabel" destination="cAd-TT-dH3" id="qPq-03-vbp"/>
+                        <outlet property="explanationLabel" destination="g24-1M-rmQ" id="Hcl-mX-OYo"/>
+                        <outlet property="leftLabel" destination="43Z-WS-KcH" id="YWk-8s-yfT"/>
                         <outlet property="maruImageView" destination="sWv-GQ-J8h" id="Aui-5S-2AI"/>
                         <outlet property="noteTextViewLabel" destination="cU5-OU-Dat" id="vZg-Ez-kYM"/>
                         <outlet property="noteViewLabel" destination="Avn-fd-vTx" id="uJQ-3y-SMu"/>
-                        <outlet property="questionNumLabel" destination="gBD-ak-9R5" id="9mi-9g-1rP"/>
+                        <outlet property="questionNumLabel" destination="gBD-ak-9R5" id="rdM-1s-6Y1"/>
                         <outlet property="questions10ButtonLabel" destination="fYM-Uz-lmo" id="l6X-mj-JrM"/>
                         <outlet property="questions20ButtonLabel" destination="9Cs-NL-qcb" id="n0o-aJ-pRq"/>
                         <outlet property="questions30ButtonLabel" destination="r6P-IV-qJl" id="x5D-Lk-X6G"/>
                         <outlet property="randomQuestionsButtonLabel" destination="4UB-fe-cla" id="MTJ-ph-fyA"/>
-                        <outlet property="rightLabel" destination="bBk-J0-t0h" id="Qz9-yg-Ivz"/>
-                        <outlet property="timerLabel" destination="3x6-Pg-6ua" id="SXc-0p-hji"/>
+                        <outlet property="rightLabel" destination="bBk-J0-t0h" id="fLC-FX-UQ2"/>
+                        <outlet property="timerLabel" destination="3x6-Pg-6ua" id="7YY-gV-Hhg"/>
                         <segue destination="ekH-Ir-fts" kind="show" identifier="toThirdResult" id="yhN-ip-qd8"/>
                     </connections>
                 </viewController>
@@ -1286,10 +1288,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="suuzi1" translatesAutoresizingMaskIntoConstraints="NO" id="89N-le-0vZ">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="○△❓□♤ rank" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ky-sv-Jfu">
                                 <rect key="frame" x="20" y="33" width="343" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1360,7 +1358,7 @@
                                     <action selector="FacebookButtonWithSender:" destination="ekH-Ir-fts" eventType="touchUpInside" id="obC-wd-3Fw"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUd-op-PcV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUd-op-PcV" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
                                 <rect key="frame" x="103" y="103" width="172" height="167"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1368,6 +1366,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="suuzi1" translatesAutoresizingMaskIntoConstraints="NO" id="89N-le-0vZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -1383,7 +1385,7 @@
                         <outlet property="highScoreTextLabel" destination="svE-c7-lrv" id="kOL-Aj-6WH"/>
                         <outlet property="lastScoreLabel" destination="r7B-oa-D5m" id="8rg-YA-Nd9"/>
                         <outlet property="lastScoreTextLabel" destination="Bpn-ac-k4a" id="Emn-wU-YYN"/>
-                        <outlet property="rankLabel" destination="yUd-op-PcV" id="Q1f-Cr-8MZ"/>
+                        <outlet property="rankLabel" destination="yUd-op-PcV" id="Xxz-D9-Dcj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="laE-5w-age" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1410,7 +1412,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCz-Md-3RX" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
-                                <rect key="frame" x="106" y="78" width="162" height="162"/>
+                                <rect key="frame" x="106" y="42" width="162" height="162"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="100"/>
@@ -1418,7 +1420,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="○△❓□ rank" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSc-BN-Gqp">
-                                <rect key="frame" x="27" y="20" width="343" height="50"/>
+                                <rect key="frame" x="16" y="237" width="343" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="38"/>
@@ -1426,7 +1428,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5Q-Ck-vic">
-                                <rect key="frame" x="0.0" y="400" width="224" height="90"/>
+                                <rect key="frame" x="0.0" y="367" width="224" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="48"/>
@@ -1445,22 +1447,6 @@
                                     <action selector="backButton:" destination="zQp-Mx-FMb" eventType="touchUpInside" id="v1J-ba-lDz"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQy-U2-00T">
-                                <rect key="frame" x="232" y="258" width="143" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="47"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1C-E8-1j5">
-                                <rect key="frame" x="232" y="400" width="143" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="47"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29Z-4R-1oB">
                                 <rect key="frame" x="72" y="596" width="96" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1478,11 +1464,11 @@
                                     <action selector="FacebookButtonWithSender:" destination="zQp-Mx-FMb" eventType="touchUpInside" id="QMj-B0-44P"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="High Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dw-DL-94E">
-                                <rect key="frame" x="0.0" y="258" width="224" height="90"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1C-E8-1j5">
+                                <rect key="frame" x="232" y="367" width="143" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="48"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="47"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1497,11 +1483,9 @@
                         <viewLayoutGuide key="safeArea" id="sz7-ir-cbF"/>
                     </view>
                     <connections>
-                        <outlet property="highScoreLabel" destination="5dw-DL-94E" id="Sht-PH-uDG"/>
-                        <outlet property="highScoreTextLabel" destination="RQy-U2-00T" id="v4J-qc-FVc"/>
                         <outlet property="lastScoreLabel" destination="R5Q-Ck-vic" id="26w-tB-0e2"/>
                         <outlet property="lastScoreTextLabel" destination="h1C-E8-1j5" id="OH4-93-nDQ"/>
-                        <outlet property="rankLabel" destination="XCz-Md-3RX" id="nZV-EM-hFP"/>
+                        <outlet property="rankLabel" destination="XCz-Md-3RX" id="Rs4-37-ZQt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1jm-rw-lUk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1518,6 +1502,6 @@
         <image name="suuzi1" width="400" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fgh-Ce-xDn"/>
+        <segue reference="Foh-iV-TxL"/>
     </inferredMetricsTieBreakers>
 </document>

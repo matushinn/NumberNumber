@@ -9,21 +9,22 @@
 import UIKit
 import AudioToolbox
 import AVFoundation
+import LTMorphingLabel
 
 class ThirdViewController: UIViewController {
     
     var audioPlayer:AVAudioPlayer!
-    @IBOutlet weak var leftLabel: UILabel!
+    @IBOutlet weak var leftLabel: LTMorphingLabel!
     
+    @IBOutlet weak var rightLabel: LTMorphingLabel!
     
-    @IBOutlet weak var rightLabel: UILabel!
+    @IBOutlet weak var calcLabel: LTMorphingLabel!
     
+    @IBOutlet weak var answerLabel: LTMorphingLabel!
     
-    @IBOutlet weak var calcLabel: UILabel!
+    @IBOutlet weak var timerLabel: LTMorphingLabel!
     
-    @IBOutlet weak var answerLabel: UILabel!
-    
-    @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var questionNumLabel: LTMorphingLabel!
     
     
     @IBOutlet weak var maruImageView: UIImageView!
@@ -37,6 +38,8 @@ class ThirdViewController: UIViewController {
     @IBOutlet weak var questions30ButtonLabel: UIButton!
     
     @IBOutlet weak var randomQuestionsButtonLabel: UIButton!
+    
+    @IBOutlet weak var explanationLabel: LTMorphingLabel!
     
     var calc:[String] = ["+","-","×"]
     
@@ -64,8 +67,8 @@ class ThirdViewController: UIViewController {
     
     @IBOutlet weak var noteViewLabel: UIView!
     
-    @IBOutlet weak var questionNumLabel: UILabel!
     
+
     func vibrate() {
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
     }
@@ -418,6 +421,14 @@ class ThirdViewController: UIViewController {
         } catch {
             print("error")
         }
+        //LTMorphingLabel
+        leftLabel.morphingEffect = .anvil
+        rightLabel.morphingEffect = .anvil
+        calcLabel.morphingEffect = .anvil
+        timerLabel.morphingEffect = .fall
+        questionNumLabel.morphingEffect = .pixelate
+        answerLabel.morphingEffect = .evaporate
+        explanationLabel.morphingEffect = .pixelate
         
     }
     func startTimer(){
