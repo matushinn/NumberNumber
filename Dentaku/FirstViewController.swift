@@ -41,6 +41,7 @@ class FirstViewController: UIViewController {
     
     @IBOutlet weak var randomQuestionsButtonLabel: UIButton!
     
+    @IBOutlet weak var hanamaruImageView: UIImageView!
     
     var calc:[String] = ["+","-","×"]
     
@@ -115,6 +116,11 @@ class FirstViewController: UIViewController {
             vibrate()
             //正解音
             AudioServicesPlayAlertSound(1025)
+            
+            questionNum += 1
+            questionNumLabel.text = String(questionNum)
+            
+           
             //正解アニメーション
             UIView.animate(withDuration: 0.7, animations: {
                 self.maruImageView.alpha = 1.0
@@ -122,11 +128,9 @@ class FirstViewController: UIViewController {
                 self.maruImageView.alpha = 0.0
             })
             
-        
- 
             showQuestion()
-            questionNum += 1
-            questionNumLabel.text = String(questionNum)
+            
+            
            //buttonによる識別
             if count10 == 1{
                 if questionNum == 8{
@@ -183,6 +187,7 @@ class FirstViewController: UIViewController {
             //不正解音
             AudioServicesPlayAlertSound(1006)
             //audioPlayer.pause()
+            
             UIView.animate(withDuration: 0.7, animations: {
                 self.batuImageView.alpha = 1.0
             }, completion: { finished in
@@ -441,7 +446,6 @@ class FirstViewController: UIViewController {
         timerLabel.morphingEffect = .fall
         questionNumLabel.morphingEffect = .pixelate
         answerLabel.morphingEffect = .evaporate
-        explanationLabel.morphingEffect = .pixelate
         
     }
     

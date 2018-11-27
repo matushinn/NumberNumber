@@ -31,10 +31,7 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var explanationLabel: LTMorphingLabel!
     
    
-    @IBOutlet weak var batsuImageView: UIImageView!
-    
-    @IBOutlet weak var maruImageView: UIImageView!
-    
+  
     @IBOutlet weak var questions10ButtonLabel: UIButton!
     
     @IBOutlet weak var questions20ButtonLabel: UIButton!
@@ -43,7 +40,9 @@ class SecondViewController: UIViewController {
     
     @IBOutlet weak var randomQuestionsButtonLabel: UIButton!
     
+    @IBOutlet weak var maruImageView: UIImageView!
     
+    @IBOutlet weak var batsuImageView: UIImageView!
     
     var calc:[String] = ["+","-","×"]
     
@@ -92,8 +91,18 @@ class SecondViewController: UIViewController {
         leftLabel.text = String(leftNumber)
         rightLabel.text = String(rightNumber)
         
-        
+       
         let calculation = Int( arc4random_uniform(UInt32(calc.count)) )
+        if calc[calculation] == "+"{
+            calcLabel.textColor = UIColor.blue
+        }
+        if calc[calculation] == "-"{
+            calcLabel.textColor = UIColor.green
+        }
+        if calc[calculation] == "×"{
+            calcLabel.textColor = UIColor.yellow
+        }
+        
         calcLabel.text = calc[calculation]
         
     }
@@ -104,9 +113,9 @@ class SecondViewController: UIViewController {
             //正解音
             AudioServicesPlayAlertSound(1025)
              UIView.animate(withDuration: 0.7, animations: {
-             self.maruImageView.alpha = 1
+             self.maruImageView.alpha = 1.0
              }, completion: { finished in
-             self.maruImageView.alpha = 0
+             self.maruImageView.alpha = 0.0
              })
             showQuestion()
             questionNum += 1
@@ -199,13 +208,13 @@ class SecondViewController: UIViewController {
     @IBAction func okButton(_ sender: Any) {
         
         
-        if calcLabel.text == "➕"{
+        if calcLabel.text == "+"{
             result = leftNumber + rightNumber
         }
-        if calcLabel.text == "➖"{
+        if calcLabel.text == "-"{
             result = leftNumber - rightNumber
         }
-        if calcLabel.text == "✖️"{
+        if calcLabel.text == "×"{
             result = leftNumber * rightNumber
         }
         

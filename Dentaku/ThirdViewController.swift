@@ -26,11 +26,6 @@ class ThirdViewController: UIViewController {
     
     @IBOutlet weak var questionNumLabel: LTMorphingLabel!
     
-    
-    @IBOutlet weak var maruImageView: UIImageView!
-    
-    @IBOutlet weak var batsuImageView: UIImageView!
-    
     @IBOutlet weak var questions10ButtonLabel: UIButton!
     
     @IBOutlet weak var questions20ButtonLabel: UIButton!
@@ -40,6 +35,12 @@ class ThirdViewController: UIViewController {
     @IBOutlet weak var randomQuestionsButtonLabel: UIButton!
     
     @IBOutlet weak var explanationLabel: LTMorphingLabel!
+    
+    
+    @IBOutlet weak var maruImageView: UIImageView!
+    
+    @IBOutlet weak var batsuImageView: UIImageView!
+    
     
     var calc:[String] = ["+","-","×"]
     

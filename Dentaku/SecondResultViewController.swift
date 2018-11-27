@@ -13,25 +13,40 @@ import LTMorphingLabel
 
 
 class SecondResultViewController: UIViewController {
+    
     var audioPlayer:AVAudioPlayer!
     
-    @IBOutlet weak var highScoreLabel: UILabel!
-    @IBOutlet weak var lastScoreLabel: UILabel!
+   
+    @IBOutlet weak var lastScoreLabel: LTMorphingLabel!
     
-    @IBOutlet weak var highScoreTextLabel: UILabel!
-    
-    @IBOutlet weak var lastScoreTextLabel: UILabel!
+   
+    @IBOutlet weak var lastScoreTextLabel : LTMorphingLabel!
     
     
     @IBOutlet weak var rankLabel: LTMorphingLabel!
     
+    @IBOutlet weak var shareTextLabel: LTMorphingLabel!
+    
+    
     var timerArray = [Double]()
     var highTimerArray = [Double]()
     var secondQuestionNumArray = [Int]()
-    var lastScore:Double = 0.0
-    var highScore:Double = 0.0
+    var lastTime:Double = 0.0
+    var highTime:Double = 0.0
     
     var rank:Double = 0
+    var rankResault:String!
+    var effectTimer:Timer?
+    
+    var timeIndex:Int = 0
+    var shareIndex:Int = 0
+    
+    
+    let ud = UserDefaults.standard
+    
+    var shareText = ["share!!","share share!!","share share share!!"]
+    var timeText = ["Last Time","Time"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,65 +59,78 @@ class SecondResultViewController: UIViewController {
             print("error")
         }
         audioPlayer.play()
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         
-        //lastScoreというキー値で保存された、配列timerArrayを取り出す
-        if UserDefaults.standard.object(forKey: "lastScore") != nil{
-            timerArray = UserDefaults.standard.object(forKey: "lastScore") as! [Double]
-            if UserDefaults.standard.object(forKey: "highScore") != nil{
-                //highScoreあったら
-                highTimerArray = UserDefaults.standard.object(forKey: "highScore") as! [Double]
-                
-                checkHighScore()
-                
-            }else{
-                //highScoreなかったら
-                highScore = 0.0
-                
-                checkHighScore()
-                
-            }
-            rankQuestion()
+        //LTMorphing
+        rankLabel.morphingEffect = .burn
+        shareTextLabel.morphingEffect = .fall
+        lastScoreTextLabel.morphingEffect = .sparkle
+        lastScoreLabel.morphingEffect = .sparkle
+        shareTextLabel.morphingEffect = .pixelate
+    
+        ///lastScoreというキー値で保存された、配列timerArrayを取り出す
+        if ud.object(forKey: "lastScore") != nil{
+            timerArray = ud.object(forKey: "lastScore") as! [Double]
+            lastTime = timerArray[0]
+            lastScoreTextLabel.text = String(lastTime)
         }
-    }
-    //hightimeCheck
-    func checkHighScore(){
-        lastScore = timerArray[0]
-        lastScoreTextLabel.text = String(lastScore)
-        
-        //                highScore = highTimerArray[0]
-        
-        
-        if highScore != 0.0{
-            //2回目以降
-            if highScore > lastScore{
-                highScore = lastScore
-            }
-        }else{
-            //highScore=0 -> 最初
-            highScore = lastScore
-            
-        }
-        highScoreTextLabel.text = String(highScore)
-        
-        //textFieldで記入されたテキストを入れる
-        highTimerArray.append(Double(highScore))
-        
-        //キー値"array"で配列の保存
-        UserDefaults.standard.set(highTimerArray, forKey: "highScore")
-        
-        
+        rankQuestion()
     }
     
-    //rankを計算する
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        effectTimer = Timer.scheduledTimer(timeInterval: 3.0,
+                                           target: self,
+                                           selector: #selector(updateLabel(timer:)), userInfo: nil,
+                                           repeats: true)
+        effectTimer?.fire()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        effectTimer?.invalidate()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    @objc func updateLabel(timer: Timer) {
+        // rankTextLabel.text = rankText[index]
+        //rankLabel.text = rankResault
+        lastScoreLabel.text = timeText[timeIndex]
+        shareTextLabel.text = shareText[shareIndex]
+        
+        timeIndex += 1
+        if timeIndex >= timeText.count {
+            timeIndex = 0
+        }
+        shareIndex += 1
+        if shareIndex >= shareText.count{
+            shareIndex = 0
+        }
+        
+    }
     
     
     func rankQuestion(){
         if UserDefaults.standard.object(forKey: "secondQuestionsNum") != nil{
-            secondQuestionNumArray = UserDefaults.standard.object(forKey: "secondQuestionsNum") as! [Int]
-            rank = lastScore/Double(secondQuestionNumArray[0])
+            secondQuestionNumArray = ud.object(forKey: "secondQuestionsNum") as! [Int]
+            
+            rankCheck()
+            ud.removeObject(forKey: "secondQuestionsNum")
+            
+            /*    問題と解答を削除したので、キーが"questions"のオブジェクトの値がnilになる
+             *  -> 読み込まれたときのエラーを回避するために値に空の配列を入れておく
+             */
+            ud.set([], forKey: "secondQuestionsNum")
+        }
+    }
+    
+    
+   
+    func rankCheck(){
+        rank = lastTime/Double(secondQuestionNumArray[0])
         switch rank {
         case 0..<1.0:
             rankLabel.textColor = UIColor.blue
@@ -140,18 +168,10 @@ class SecondResultViewController: UIViewController {
             rankLabel.text = "Z"
             
         }
-        }
-        UserDefaults.standard.removeObject(forKey: "secondQuestionsNum")
-        
-        /*    問題と解答を削除したので、キーが"questions"のオブジェクトの値がnilになる
-         *  -> 読み込まれたときのエラーを回避するために値に空の配列を入れておく
-         */
-        UserDefaults.standard.set([], forKey: "secondQuestionsNum")
-    
     }
-    
     @IBAction func backButton(_ sender: Any) {
-        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+       
+        self.performSegue(withIdentifier: "toBack2", sender: nil)
     }
     @IBAction func TweetButton(sender: UIButton) {
         
@@ -171,7 +191,7 @@ class SecondResultViewController: UIViewController {
         
         self.present(composeViewController, animated: true, completion: nil)
     }
-    
+ 
     
 }
 

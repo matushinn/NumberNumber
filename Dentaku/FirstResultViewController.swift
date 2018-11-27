@@ -35,10 +35,12 @@ class FirstResultViewController: UIViewController {
     var rank:Double = 0
     
     var effectTimer:Timer?
-    var index:Int = 0
+    var timeIndex:Int = 0
+    var shareIndex:Int = 0
     
     //var rankText = ["○❓△Rank","○❓△rank","○❓△RANK"]
-    
+    var timeText = ["Last Time","Time"]
+    var shareText = ["share!!","share share!!","share share share!!"]
     let ud = UserDefaults.standard
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +50,7 @@ class FirstResultViewController: UIViewController {
         rankTextLabel.morphingEffect = .fall
         lastScoreTextLabel.morphingEffect = .sparkle
         lastScoreLabel.morphingEffect = .sparkle
-        shareTextLabel.morphingEffect = .pixelate
+        shareTextLabel.morphingEffect = .fall
         
         do {
             let filePath = Bundle.main.path(forResource: "goal",ofType: "mp3")
@@ -91,8 +93,18 @@ class FirstResultViewController: UIViewController {
     }
     @objc func updateLabel(timer: Timer) {
        // rankTextLabel.text = rankText[index]
-        rankLabel.text = rankResault
+        //rankLabel.text = rankResault
+        lastScoreLabel.text = timeText[timeIndex]
+        shareTextLabel.text = shareText[shareIndex]
         
+        timeIndex += 1
+        if timeIndex >= timeText.count {
+            timeIndex = 0
+        }
+        shareIndex += 1
+        if shareIndex >= shareText.count{
+            shareIndex = 0
+        }
         
     }
     
@@ -115,7 +127,7 @@ class FirstResultViewController: UIViewController {
         switch rank {
         case 0..<1.0:
             rankLabel.textColor = UIColor.blue
-            rankResault = "SS"
+            rankResault = "SSS"
         case 1.0..<1.5:
             rankLabel.textColor = UIColor.purple
             rankResault = "SS"
@@ -155,7 +167,7 @@ class FirstResultViewController: UIViewController {
 
     
     @IBAction func backButton(_ sender: Any) {
-        self.performSegue(withIdentifier: "toReset", sender: nil)
+        self.performSegue(withIdentifier: "toBack1", sender: nil)
         
     }
     @IBAction func TweetButton(sender: UIButton) {
@@ -180,4 +192,19 @@ class FirstResultViewController: UIViewController {
     
     
 }
+extension ViewController: LTMorphingLabelDelegate {
+    
+    func morphingDidStart(_ label: LTMorphingLabel) {
+        print("morphingDidStart")
+    }
+    
+    func morphingDidComplete(_ label: LTMorphingLabel) {
+        print("morphingDidComplete")
+    }
+    
+    func morphingOnProgress(_ label: LTMorphingLabel, progress: Float) {
+        print("morphingOnProgress", progress)
+    }
+}
+
 
