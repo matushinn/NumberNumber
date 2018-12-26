@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7935946CC88311505648F8A07236DA75"
+               BlueprintIdentifier = "B9660861278E746FBD3F2594AF36088D"
                BuildableName = "Pods_Dentaku.framework"
                BlueprintName = "Pods-Dentaku"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7935946CC88311505648F8A07236DA75"
+            BlueprintIdentifier = "B9660861278E746FBD3F2594AF36088D"
             BuildableName = "Pods_Dentaku.framework"
             BlueprintName = "Pods-Dentaku"
             ReferencedContainer = "container:Pods.xcodeproj">

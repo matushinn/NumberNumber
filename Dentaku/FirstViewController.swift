@@ -60,7 +60,8 @@ class FirstViewController: UIViewController {
     var count:Double = 0.0
     var firstQuestionsNumArray = [Int]()
     
-    var modeNum = 0
+    //モードを管理する変数
+    var modeNum:Int!
     
     
     
@@ -74,6 +75,21 @@ class FirstViewController: UIViewController {
     
     @IBOutlet weak var noteViewLabel: UIView!
     
+    //何桁の問題か判別するための値渡し
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let resultVC = segue.destination as! FirstResultViewController
+        
+        switch modeNum{
+        case 0:
+            resultVC.modeNum = modeNum
+        case 1:
+            resultVC.modeNum = modeNum
+        case 2:
+            resultVC.modeNum = modeNum
+        default:
+            break
+        }
+    }
     
     func vibrate() {
         AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
@@ -88,9 +104,22 @@ class FirstViewController: UIViewController {
     }
     //    問題を出す関数
     func showQuestion(){
-        //1~9までの数字
-        leftNumber=Int(arc4random(lower: 1, upper: 10))
-        rightNumber=Int(arc4random(lower: 1, upper: 10))
+        switch modeNum {
+        case 0:
+            //1~9までの数字
+            leftNumber=Int(arc4random(lower: 1, upper: 10))
+            rightNumber=Int(arc4random(lower: 1, upper: 10))
+        case 1:
+            //1~9までの数字
+            leftNumber=Int(arc4random(lower: 10, upper: 100))
+            rightNumber=Int(arc4random(lower: 1, upper: 10))
+        case 2:
+            //1~9までの数字
+            leftNumber=Int(arc4random(lower: 10, upper: 100))
+            rightNumber=Int(arc4random(lower: 10, upper: 100))
+        default:
+            break
+        }
         
         leftLabel.text = String(leftNumber)
         rightLabel.text = String(rightNumber)
@@ -224,8 +253,6 @@ class FirstViewController: UIViewController {
     
     
     @IBAction func okButton(_ sender: Any) {
-        
-        
         if calcLabel.text == "+"{
             result = leftNumber + rightNumber
         }
@@ -252,168 +279,58 @@ class FirstViewController: UIViewController {
         answerLabel.text = String(answer)
     }
     @IBAction func oneButton(_ sender: Any) {
-        if answerLabel.text == "0"{
-            answer = 1
-        }
-        if answerLabel.text != "0" && answerLabel.text != "-" && answer > 0{
-            answer = 10*answer + 1
-        }
-        if answerLabel.text == "-"{
-            answer = -1
-        }
-        if answerLabel.text != "-" && answer < 0 {
-            answer = 10*answer - 1
-        }
-        
-        answerLabel.text = String(answer)
+        calcProcess(index: 1)
         
     }
     
     @IBAction func twoButton(_ sender: Any) {
-        if answerLabel.text == "0"{
-            answer = 2
-        }
-        if answerLabel.text != "0" && answerLabel.text != "-" && answer > 0{
-            answer = 10*answer + 2
-        }
-        if answerLabel.text == "-"{
-            answer = -2
-        }
-        if answerLabel.text != "-" && answer < 0 {
-            answer = 10*answer - 2
-        }
-        
-        answerLabel.text = String(answer)
-        
+       calcProcess(index: 2)
     }
     
     @IBAction func threeButton(_ sender: Any) {
-        if answerLabel.text == "0"{
-            answer = 3
-        }
-        if answerLabel.text != "0" && answerLabel.text != "-" && answer > 0{
-            answer = 10*answer + 3
-        }
-        if answerLabel.text == "-"{
-            answer = -3
-        }
-        if answerLabel.text != "-" && answer < 0 {
-            answer = 10*answer - 3
-        }
-        
-        answerLabel.text = String(answer)
-        
-        
+       calcProcess(index: 3)
     }
     @IBAction func fourButton(_ sender: Any) {
-        if answerLabel.text == "0"{
-            answer = 4
-        }
-        if answerLabel.text != "0" && answerLabel.text != "-" && answer > 0{
-            answer = 10*answer + 4
-        }
-        if answerLabel.text == "-"{
-            answer = -4
-        }
-        if answerLabel.text != "-" && answer < 0 {
-            answer = 10*answer - 4
-        }
-        
-        answerLabel.text = String(answer)
-        
+        calcProcess(index: 4)
     }
     
     @IBAction func fiveButton(_ sender: Any) {
-        if answerLabel.text == "0"{
-            answer = 5
-        }
-        if answerLabel.text != "0" && answerLabel.text != "-" && answer > 0{
-            answer = 10*answer + 5
-        }
-        if answerLabel.text == "-"{
-            answer = -5
-        }
-        if answerLabel.text != "-" && answer < 0 {
-            answer = 10*answer - 5
-        }
-        
-        answerLabel.text = String(answer)
-        
+        calcProcess(index: 5)
     }
     @IBAction func sixButton(_ sender: Any) {
-        
-        
-        if answerLabel.text == "0"{
-            answer = 6
-        }
-        if answerLabel.text != "0" && answerLabel.text != "-" && answer > 0{
-            answer = 10*answer + 6
-        }
-        if answerLabel.text == "-"{
-            answer = -6
-        }
-        if answerLabel.text != "-" && answer < 0 {
-            answer = 10*answer - 6
-        }
-        
-        answerLabel.text = String(answer)
+        calcProcess(index: 6)
         
     }
     
     @IBAction func sevenButton(_ sender: Any) {
-        
-        if answerLabel.text == "0"{
-            answer = 7
-        }
-        if answerLabel.text != "0" && answerLabel.text != "-" && answer > 0{
-            answer = 10*answer + 7
-        }
-        if answerLabel.text == "-"{
-            answer = -7
-        }
-        if answerLabel.text != "-" && answer < 0 {
-            answer = 10*answer - 7
-        }
-        
-        answerLabel.text = String(answer)
+        calcProcess(index: 7)
         
     }
     
     @IBAction func eightButton(_ sender: Any) {
-        if answerLabel.text == "0"{
-            answer = 8
-        }
-        if answerLabel.text != "0" && answerLabel.text != "-" && answer > 0{
-            answer = 10*answer + 8
-        }
-        if answerLabel.text == "-"{
-            answer = -8
-        }
-        if answerLabel.text != "-" && answer < 0 {
-            answer = 10*answer - 8
-        }
-        
-        answerLabel.text = String(answer)
+        calcProcess(index: 8)
     }
     
     
     @IBAction func nineButton(_ sender: Any) {
         
+        calcProcess(index: 9)
+    }
+    func calcProcess(index:Int){
         if answerLabel.text == "0"{
-            answer = 9
+            answer = index
         }
         if answerLabel.text != "0" && answerLabel.text != "-" && answer > 0 {
-            answer = 10*answer + 9
+            answer = 10*answer + index
         }
         if answerLabel.text == "-"{
-            answer = -9
+            answer = -index
         }
         if answerLabel.text != "-" && answer < 0 {
-            answer = 10*answer - 9
+            answer = 10*answer - index
         }
         
         answerLabel.text = String(answer)
-        
     }
     
     
@@ -430,7 +347,7 @@ class FirstViewController: UIViewController {
         showQuestion()
         
         do {
-            let filePath = Bundle.main.path(forResource: "sentou",ofType: "mp3")
+            let filePath = Bundle.main.path(forResource: "hikouki",ofType: "mp3")
             let musicPath = URL(fileURLWithPath: filePath!)
             audioPlayer = try AVAudioPlayer(contentsOf: musicPath)
             //roop

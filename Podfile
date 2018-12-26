@@ -7,4 +7,7 @@ target 'Dentaku' do
 
   # Pods for Dentaku
 pod 'LTMorphingLabel'
+pod 'Firebase/AdMob'
+pod 'Google-Mobile-Ads-SDK'
+
 end
