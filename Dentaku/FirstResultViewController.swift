@@ -20,7 +20,6 @@ class FirstResultViewController: UIViewController  {
     
     @IBOutlet weak var lastScoreLabel: LTMorphingLabel!
     
-    
     @IBOutlet weak var lastScoreTextLabel: LTMorphingLabel!
     
     @IBOutlet weak var rankLabel: LTMorphingLabel!
@@ -29,12 +28,6 @@ class FirstResultViewController: UIViewController  {
     
     @IBOutlet weak var shareTextLabel: LTMorphingLabel!
     
-    var timerArray = [Double]()
-    var highTimerArray = [Double]()
-    var firstQuestionNumArray = [Int]()
-    var lastTime:Double = 0.0
-    var highTime:Double = 0.0
-    
     var rankResault:String!
     var rank:Double = 0
     
@@ -42,13 +35,17 @@ class FirstResultViewController: UIViewController  {
     var timeIndex:Int = 0
     var shareIndex:Int = 0
     
+    var modeSecond:Int=0
+    
     //var rankText = ["○❓△Rank","○❓△rank","○❓△RANK"]
-    var timeText = ["Last Time","Time"]
+    var scoreText = ["Last Score","Score"]
     var shareText = ["share!!","share share!!","share share share!!"]
     let ud = UserDefaults.standard
     
     //桁数を判別する変数
     var modeNum:Int!
+    
+    var lastQuestionNum:Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,14 +68,9 @@ class FirstResultViewController: UIViewController  {
         }
         audioPlayer.play()
         
+        lastScoreTextLabel.text = "\(lastQuestionNum) questions"
+        rankCheck()
         
-        ///lastScoreというキー値で保存された、配列timerArrayを取り出す
-        if ud.object(forKey: "lastScore") != nil{
-            timerArray = ud.object(forKey: "lastScore") as! [Double]
-            lastTime = timerArray[0]
-            lastScoreTextLabel.text = String(lastTime)
-        }
-        rankQuestion()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -93,7 +85,6 @@ class FirstResultViewController: UIViewController  {
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        
         effectTimer?.invalidate()
     }
     
@@ -103,11 +94,11 @@ class FirstResultViewController: UIViewController  {
     @objc func updateLabel(timer: Timer) {
        // rankTextLabel.text = rankText[index]
         //rankLabel.text = rankResault
-        lastScoreLabel.text = timeText[timeIndex]
+        lastScoreLabel.text = scoreText[timeIndex]
         shareTextLabel.text = shareText[shareIndex]
         
         timeIndex += 1
-        if timeIndex >= timeText.count {
+        if timeIndex >= scoreText.count {
             timeIndex = 0
         }
         shareIndex += 1
@@ -118,21 +109,9 @@ class FirstResultViewController: UIViewController  {
     }
     
     
-    func rankQuestion(){
-        if UserDefaults.standard.object(forKey: "firstQuestionsNum") != nil{
-            firstQuestionNumArray = ud.object(forKey: "firstQuestionsNum") as! [Int]
-            
-            rankCheck()
-            ud.removeObject(forKey: "firstQuestionsNum")
-            
-            /*    問題と解答を削除したので、キーが"questions"のオブジェクトの値がnilになる
-             *  -> 読み込まれたときのエラーを回避するために値に空の配列を入れておく
-             */
-            ud.set([], forKey: "firstQuestionsNum")
-        }
-    }
     func rankCheck(){
-        rank = lastTime/Double(firstQuestionNumArray[0])
+        
+        rank = Double(modeSecond/lastQuestionNum)
         
         switch modeNum{
         case 0:

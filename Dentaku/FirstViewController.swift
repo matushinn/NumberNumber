@@ -26,26 +26,17 @@ class FirstViewController: UIViewController {
     
     @IBOutlet weak var questionNumLabel: LTMorphingLabel!
     
-    @IBOutlet weak var explanationLabel: LTMorphingLabel!
     
    
     @IBOutlet weak var maruImageView: UIImageView!
     
     @IBOutlet weak var batuImageView: UIImageView!
     
-    @IBOutlet weak var questions10ButtonLabel: UIButton!
     
-    @IBOutlet weak var questions20ButtonLabel: UIButton!
-    
-    @IBOutlet weak var questions30ButtonLabel: UIButton!
-    
-    @IBOutlet weak var randomQuestionsButtonLabel: UIButton!
-    
-    @IBOutlet weak var hanamaruImageView: UIImageView!
     
     var calc:[String] = ["+","-","×"]
     
-    var questionNum :Int = 1
+    var correctNum :Int = 1
     
     var result:Int = 0
     
@@ -58,36 +49,22 @@ class FirstViewController: UIViewController {
     //  timer保存する配列
     var firstTimerArray = [Double]()
     var count:Double = 0.0
-    var firstQuestionsNumArray = [Int]()
     
     //モードを管理する変数
     var modeNum:Int!
     
     
-    
-    //Button識別のためのカウント
-    var count10:Int=0
-    var count20:Int = 0
-    var count30:Int=0
-    var randomCount:Int = 0
-    
-    @IBOutlet weak var noteTextViewLabel: UITextView!
-    
-    @IBOutlet weak var noteViewLabel: UIView!
-    
+    var modeSecond:Int=90
+   
     //何桁の問題か判別するための値渡し
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let resultVC = segue.destination as! FirstResultViewController
-        
-        switch modeNum{
-        case 0:
+        if segue.identifier == "toResult"{
+            let resultVC = segue.destination as! FirstResultViewController
+            
+            
             resultVC.modeNum = modeNum
-        case 1:
-            resultVC.modeNum = modeNum
-        case 2:
-            resultVC.modeNum = modeNum
-        default:
-            break
+            resultVC.modeSecond = modeSecond
+            resultVC.lastQuestionNum = correctNum
         }
     }
     
@@ -141,15 +118,15 @@ class FirstViewController: UIViewController {
     }
     func answerQuestion(){
         if result == answer{
+            
+            correctNum += 1
+            questionNumLabel.text = String(correctNum)
+            
             //正解
             vibrate()
             //正解音
             AudioServicesPlayAlertSound(1025)
             
-            questionNum += 1
-            questionNumLabel.text = String(questionNum)
-            
-           
             //正解アニメーション
             UIView.animate(withDuration: 0.7, animations: {
                 self.maruImageView.alpha = 1.0
@@ -158,57 +135,6 @@ class FirstViewController: UIViewController {
             })
             
             showQuestion()
-            
-            
-           //buttonによる識別
-            if count10 == 1{
-                if questionNum == 8{
-                    questionNumLabel.textColor = UIColor.yellow
-                }
-                if questionNum == 9{
-                    questionNumLabel.textColor = UIColor.blue
-                }
-                if questionNum == 10{
-                    questionNumLabel.textColor = UIColor.red
-                }
-                if questionNum == 11{
-                    screenTransition()
-                }
-            }
-            if count20 == 1{
-                if questionNum == 18{
-                    questionNumLabel.textColor = UIColor.yellow
-                }
-                if questionNum == 19{
-                    questionNumLabel.textColor = UIColor.blue
-                }
-                if questionNum == 20{
-                    questionNumLabel.textColor = UIColor.red
-                }
-                if questionNum == 21{
-                    screenTransition()
-                }
-            }
-            if count30 == 1{
-                if questionNum == 28{
-                    questionNumLabel.textColor = UIColor.yellow
-                }
-                if questionNum == 29{
-                    questionNumLabel.textColor = UIColor.blue
-                }
-                if questionNum == 30{
-                    questionNumLabel.textColor = UIColor.red
-                }
-                if questionNum == 31{
-                    screenTransition()
-                }
-            }
-            if randomCount == 1{
-                if questionNum == 25{
-                    screenTransition()
-                }
-            }
-            
             
         }else{
             //不正解
@@ -223,33 +149,13 @@ class FirstViewController: UIViewController {
                 self.batuImageView.alpha = 0.0
             })
             
-            }
+        }
         
         answer = 0
         answerLabel.text = "0"
         
         
     }
-    //画面遷移
-    func screenTransition(){
-        timer.invalidate()
-        print(questionNum)
-        //textFieldで記入されたテキストを入れる
-        firstTimerArray.append(Double(timerLabel.text!)!)
-        
-        firstQuestionsNumArray.append(Int(questionNumLabel.text!)!)
-        
-        //キー値"array"で配列の保存
-        UserDefaults.standard.set(firstTimerArray, forKey: "lastScore")
-        UserDefaults.standard.set(firstQuestionsNumArray, forKey: "firstQuestionsNum")
-       
-        self.performSegue(withIdentifier: "toFirstResult", sender: nil)
-        
-        audioPlayer.stop()
-        
-    }
-    
-    
     
     
     @IBAction func okButton(_ sender: Any) {
@@ -364,6 +270,26 @@ class FirstViewController: UIViewController {
         questionNumLabel.morphingEffect = .pixelate
         answerLabel.morphingEffect = .evaporate
         
+        switch modeSecond {
+        case 30:
+            count = 30.0
+            timerLabel.text = "30.0"
+        case 60:
+            count = 60.0
+            timerLabel.text = "60.0"
+        case 90:
+            count = 90.0
+            timerLabel.text = "90.0"
+        case 82:
+            count = 82
+            timerLabel.text = "82"
+        default:
+            break
+        }
+        audioPlayer.play()
+        startTimer()
+        
+        
     }
     
     
@@ -379,44 +305,18 @@ class FirstViewController: UIViewController {
     
     //    timer
     @objc func update(){
-        count = count + 0.1
+        count = count - 0.1
         timerLabel.text = String(format: "%.1f", count)
-        
+        if count < 0{
+            timer.invalidate()
+            self.performSegue(withIdentifier: "toResult", sender: nil)
+            
+            audioPlayer.stop()
+        }
     }
     
-    @IBAction func questions10Button(_ sender: Any) {
-       buttonProcessing()
-        count10 += 1
-        
-    }
     
-   
-    @IBAction func questions20Button(_ sender: Any) {
-        buttonProcessing()
-        count20 += 1
-    }
     
-    @IBAction func questions30Button(_ sender: Any) {
-        buttonProcessing()
-        count30 += 1
-    }
-    
-    @IBAction func randomQuestionsButton(_ sender: Any) {
-        buttonProcessing()
-        randomCount += 1
-    }
-    //Button処理の関数
-    func buttonProcessing(){
-        noteViewLabel.alpha=0.0
-        noteTextViewLabel.alpha=0.0
-        questions10ButtonLabel.isHidden = true
-        questions20ButtonLabel.isHidden = true
-        questions30ButtonLabel.isHidden = true
-        randomQuestionsButtonLabel.isHidden = true
-        startTimer()
-        
-        audioPlayer.play()
-    }
 }
 extension FirstViewController: LTMorphingLabelDelegate {
     

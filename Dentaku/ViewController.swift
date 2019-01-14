@@ -65,15 +65,15 @@ class ViewController: UIViewController{
         case 0 :
             modeNum = 0
             print("1桁同士の計算")
-            self.performSegue(withIdentifier: "toFirst", sender: self)
+            self.performSegue(withIdentifier: "toTimeLimit", sender: self)
         case 1 :
             modeNum = 1
             print("1桁と２桁の計算")
-            self.performSegue(withIdentifier: "toFirst", sender: self)
+            self.performSegue(withIdentifier: "toTimeLimit", sender: self)
         case 2 :
             modeNum = 2
             print("2桁同士の計算")
-            self.performSegue(withIdentifier: "toFirst", sender: self)
+            self.performSegue(withIdentifier: "toTimeLimit", sender: self)
         default:
             break
         }
@@ -83,20 +83,10 @@ class ViewController: UIViewController{
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toFirst"{
+        if segue.identifier == "toTimeLimit"{
             //画面取り出す
-            let firstVC = segue.destination as! FirstViewController
-            switch modeNum{
-            case 0:
-                firstVC.modeNum = modeNum
-            case 1:
-                firstVC.modeNum = modeNum
-            case 2:
-                firstVC.modeNum = modeNum
-            default:
-                break
-            }
-            
+            let firstVC = segue.destination as! timeLimitViewController
+            firstVC.modeNum = modeNum
         }
     }
     
