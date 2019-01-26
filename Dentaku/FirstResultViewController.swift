@@ -281,7 +281,6 @@ class FirstResultViewController: UIViewController  {
         
         // 使用しないアクティビティタイプ
         let excludedActivityTypes = [
-            UIActivity.ActivityType.postToFacebook,
             UIActivity.ActivityType.message,
             UIActivity.ActivityType.saveToCameraRoll,
             UIActivity.ActivityType.print
