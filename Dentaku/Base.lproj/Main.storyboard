@@ -555,7 +555,7 @@
                                     <action selector="eightButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pSL-86-Nko"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eed-RC-ZqA" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eed-RC-ZqA">
                                 <rect key="frame" x="127.5" y="20" width="120" height="50"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration" identifier="timeCell"/>
@@ -810,6 +810,9 @@
                                     <constraint firstAttribute="width" constant="100" id="wsl-bK-h9y"/>
                                 </constraints>
                                 <state key="normal" image="facebook"/>
+                                <connections>
+                                    <action selector="FacebookButtonWithSender:" destination="qMH-qq-A8u" eventType="touchUpInside" id="YgI-wg-usq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkP-k1-EZC">
                                 <rect key="frame" x="84" y="577" width="90" height="70"/>
@@ -818,6 +821,9 @@
                                     <constraint firstAttribute="width" constant="90" id="Pn0-jx-6lO"/>
                                 </constraints>
                                 <state key="normal" image="Twitter_Bird.svg"/>
+                                <connections>
+                                    <action selector="TweetButtonWithSender:" destination="qMH-qq-A8u" eventType="touchUpInside" id="NHk-Kh-bGm"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rank" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tdv-De-HJx" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
                                 <rect key="frame" x="90" y="20" width="195" height="50.5"/>
@@ -917,6 +923,6 @@
         <image name="suuzi1" width="400" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fgh-Ce-xDn"/>
+        <segue reference="q8e-1z-aQy"/>
     </inferredMetricsTieBreakers>
 </document>

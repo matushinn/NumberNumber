@@ -22,7 +22,7 @@ class FirstViewController: UIViewController {
     
     @IBOutlet weak var answerLabel: LTMorphingLabel!
     
-    @IBOutlet weak var timerLabel: LTMorphingLabel!
+    @IBOutlet weak var timerLabel: UILabel!
     
     @IBOutlet weak var questionNumLabel: LTMorphingLabel!
     
@@ -60,7 +60,6 @@ class FirstViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toResult"{
             let resultVC = segue.destination as! FirstResultViewController
-            
             
             resultVC.modeNum = modeNum
             resultVC.modeSecond = modeSecond
@@ -184,9 +183,9 @@ class FirstViewController: UIViewController {
         }
         answerLabel.text = String(answer)
     }
+    
     @IBAction func oneButton(_ sender: Any) {
         calcProcess(index: 1)
-        
     }
     
     @IBAction func twoButton(_ sender: Any) {
@@ -235,7 +234,6 @@ class FirstViewController: UIViewController {
         if answerLabel.text != "-" && answer < 0 {
             answer = 10*answer - index
         }
-        
         answerLabel.text = String(answer)
     }
     
@@ -243,10 +241,6 @@ class FirstViewController: UIViewController {
     @IBAction func mainasuButton(_ sender: Any) {
         answerLabel.text = "-"
     }
-    
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -266,7 +260,6 @@ class FirstViewController: UIViewController {
         leftLabel.morphingEffect = .anvil
         rightLabel.morphingEffect = .anvil
         calcLabel.morphingEffect = .anvil
-        timerLabel.morphingEffect = .fall
         questionNumLabel.morphingEffect = .pixelate
         answerLabel.morphingEffect = .evaporate
         
@@ -291,8 +284,6 @@ class FirstViewController: UIViewController {
         
         
     }
-    
-    
     
     @IBAction func cancelButton(_ sender: Any) {
         audioPlayer.stop()

@@ -243,24 +243,55 @@ class FirstResultViewController: UIViewController  {
     }
     @IBAction func TweetButton(sender: UIButton) {
         
-        let text = "Number❓Number"
+        // 共有する項目
+        let shareText = "Number Number\n \(rankResault!)"
+        let shareWebsite = NSURL(string: "https://itunes.apple.com/us/app/numbernumber/id1444835578?l=ja&ls=1&mt=8")!
         
-        let composeViewController: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)!
-        composeViewController.setInitialText(text)
         
-        self.present(composeViewController, animated: true, completion: nil)
+        let activityItems = [shareText, shareWebsite] as [Any]
+        
+        let activityVC = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
+        
+        
+        // 使用しないアクティビティタイプ
+        let excludedActivityTypes = [
+            UIActivity.ActivityType.postToFacebook,
+            UIActivity.ActivityType.message,
+            UIActivity.ActivityType.saveToCameraRoll,
+            UIActivity.ActivityType.print
+        ]
+        
+        activityVC.excludedActivityTypes = excludedActivityTypes
+        
+        // UIActivityViewControllerを表示
+        self.present(activityVC, animated: true, completion: nil)
+
     }
     @IBAction func FacebookButton(sender: UIButton) {
         
-        let text = "Number❓Number"
+        // 共有する項目
+        let shareText = "Number Number\n \(rankResault!)"
+        let shareWebsite = NSURL(string: "https://itunes.apple.com/us/app/numbernumber/id1444835578?l=ja&ls=1&mt=8")!
         
-        let composeViewController: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)!
-        composeViewController.setInitialText(text)
         
-        self.present(composeViewController, animated: true, completion: nil)
+        let activityItems = [shareText, shareWebsite] as [Any]
+        
+        let activityVC = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
+        
+        
+        // 使用しないアクティビティタイプ
+        let excludedActivityTypes = [
+            UIActivity.ActivityType.postToFacebook,
+            UIActivity.ActivityType.message,
+            UIActivity.ActivityType.saveToCameraRoll,
+            UIActivity.ActivityType.print
+        ]
+        
+        activityVC.excludedActivityTypes = excludedActivityTypes
+        
+        // UIActivityViewControllerを表示
+        self.present(activityVC, animated: true, completion: nil)
     }
-    
-    
     
 }
 extension ViewController: LTMorphingLabelDelegate {
