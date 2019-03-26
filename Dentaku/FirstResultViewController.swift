@@ -28,7 +28,7 @@ class FirstResultViewController: UIViewController  {
     
     @IBOutlet weak var shareTextLabel: LTMorphingLabel!
     
-    var rankResault:String!
+    var rankResult:String!
     var rank:Double = 0
     
     var effectTimer:Timer?
@@ -118,38 +118,38 @@ class FirstResultViewController: UIViewController  {
             switch rank {
             case 0..<1.0:
                 rankLabel.textColor = UIColor.blue
-                rankResault = "SSS"
+                rankResult = "SSS"
             case 1.0..<1.5:
                 rankLabel.textColor = UIColor.purple
-                rankResault = "SS"
+                rankResult = "SS"
             case 1.5..<1.8:
                 rankLabel.textColor = UIColor.orange
-                rankResault = "S"
+                rankResult = "S"
             case 1.8..<2.0:
                 rankLabel.textColor = UIColor.yellow
-                rankResault = "A"
+                rankResult = "A"
             case 2.0..<2.3:
                 rankLabel.textColor = UIColor.yellow
-                rankResault = "B"
+                rankResult = "B"
             case 2.3..<2.5:
                 rankLabel.textColor = UIColor.yellow
-                rankResault = "C"
+                rankResult = "C"
             case 2.5..<2.8:
                 rankLabel.textColor = UIColor.red
-                rankResault = "D"
+                rankResult = "D"
             case 2.8..<3.0:
                 rankLabel.textColor = UIColor.red
-                rankResault = "E"
+                rankResult = "E"
             case 3.0..<3.3:
                 rankLabel.textColor = UIColor.red
-                rankResault = "F"
+                rankResult = "F"
             case 3.3..<3.5:
                 rankLabel.textColor = UIColor.magenta
-                rankResault = "G"
+                rankResult = "G"
                 
             default:
                 rankLabel.textColor = UIColor.magenta
-                rankResault = "Z"
+                rankResult = "Z"
             }
         case 1:
             switch rank {
@@ -230,7 +230,7 @@ class FirstResultViewController: UIViewController  {
             break
         }
        
-        rankLabel.text = rankResault
+        rankLabel.text = rankResult
     }
 
 
@@ -244,7 +244,7 @@ class FirstResultViewController: UIViewController  {
     @IBAction func TweetButton(sender: UIButton) {
         
         // 共有する項目
-        let shareText = "Number Number\n \(rankResault!)"
+        let shareText = "Number Number\n \(rankResult!)"
         let shareWebsite = NSURL(string: "https://itunes.apple.com/us/app/numbernumber/id1444835578?l=ja&ls=1&mt=8")!
         
         
@@ -270,7 +270,7 @@ class FirstResultViewController: UIViewController  {
     @IBAction func FacebookButton(sender: UIButton) {
         
         // 共有する項目
-        let shareText = "Number Number\n \(rankResault!)"
+        let shareText = "Number Number\n \(rankResult!)"
         let shareWebsite = NSURL(string: "https://itunes.apple.com/us/app/numbernumber/id1444835578?l=ja&ls=1&mt=8")!
         
         

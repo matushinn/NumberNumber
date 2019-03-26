@@ -11,6 +11,9 @@ import AVFoundation
 import LTMorphingLabel
 
 class StartViewController: UIViewController {
+    
+    
+    
     var timer:Timer!
      var audioPlayer:AVAudioPlayer!
     
@@ -57,7 +60,7 @@ class StartViewController: UIViewController {
         calLabel2.morphingEffect = .fall
         calLabel3.morphingEffect = .fall
         calLabel4.morphingEffect = .fall
-        
+    
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

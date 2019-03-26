@@ -133,7 +133,7 @@
                         <outlet property="calLabel4" destination="erU-pm-VRb" id="Hth-GN-r0t"/>
                         <outlet property="lowNumberLabel" destination="O84-Jc-LgU" id="Zpe-tV-6jK"/>
                         <outlet property="upNumberLabel" destination="34F-Zb-eQQ" id="Yie-LE-hRc"/>
-                        <segue destination="y4y-xZ-vLX" kind="show" identifier="toTimeAttack" id="hei-Hz-xRq"/>
+                        <segue destination="y4y-xZ-vLX" kind="presentation" identifier="toTimeAttack" modalTransitionStyle="crossDissolve" id="hei-Hz-xRq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sR8-ga-kVI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -238,7 +238,7 @@
                         <outletCollection property="modeButtons" destination="bNX-Pd-aab" collectionClass="NSMutableArray" id="26o-tH-oiH"/>
                         <outletCollection property="modeButtons" destination="8DM-oN-CGJ" collectionClass="NSMutableArray" id="lmR-Xp-hf0"/>
                         <outletCollection property="modeButtons" destination="9eT-0N-llm" collectionClass="NSMutableArray" id="Q3O-3E-EXe"/>
-                        <segue destination="EcB-qa-BOH" kind="show" identifier="toTimeLimit" id="QhZ-Vf-WnJ"/>
+                        <segue destination="EcB-qa-BOH" kind="presentation" identifier="toTimeLimit" modalTransitionStyle="crossDissolve" id="QhZ-Vf-WnJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kJp-IM-e6y" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -580,7 +580,7 @@
                                 </state>
                                 <connections>
                                     <action selector="cancelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fjc-OC-nTj"/>
-                                    <segue destination="InL-9t-DfM" kind="presentation" identifier="toStart" id="fgh-Ce-xDn"/>
+                                    <segue destination="InL-9t-DfM" kind="presentation" identifier="toStart" modalTransitionStyle="flipHorizontal" id="fgh-Ce-xDn"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HI4-Yj-4Nq" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
@@ -906,12 +906,12 @@
                         <outlet property="rankLabel" destination="Xgy-cb-MtV" id="Zvl-wr-QcI"/>
                         <outlet property="rankTextLabel" destination="Tdv-De-HJx" id="kpj-m7-5Nm"/>
                         <outlet property="shareTextLabel" destination="h7X-8O-k7g" id="vCf-zU-QfI"/>
-                        <segue destination="InL-9t-DfM" kind="presentation" identifier="toBack1" id="q8e-1z-aQy"/>
+                        <segue destination="InL-9t-DfM" kind="presentation" identifier="toBack1" modalTransitionStyle="flipHorizontal" id="q8e-1z-aQy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Irj-Mv-eYj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="974" y="134"/>
+            <point key="canvasLocation" x="836" y="155"/>
         </scene>
     </scenes>
     <resources>
@@ -923,6 +923,6 @@
         <image name="suuzi1" width="400" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="q8e-1z-aQy"/>
+        <segue reference="fgh-Ce-xDn"/>
     </inferredMetricsTieBreakers>
 </document>

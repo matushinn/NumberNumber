@@ -46,7 +46,6 @@
 		375198BA2185497000C02861 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		375198BC2185497000C02861 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3770B97221A3B29D008288CB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		378E8BAA21C729D00053D439 /* Dentaku copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Dentaku copy-Info.plist"; path = "/Users/ooeshoutarou/swift-camp/NumberNumber/Dentaku copy-Info.plist"; sourceTree = "<absolute>"; };
 		4A4A140944E9373B14A7E4F1 /* Pods_Dentaku.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dentaku.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9319688E5AF9A67392F2FF0 /* Pods-Dentaku.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dentaku.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dentaku/Pods-Dentaku.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,7 +90,6 @@
 				375198AE2185496F00C02861 /* Products */,
 				37127C83219E5B11002DBAEA /* Frameworks */,
 				D1138596132DDF2BF5158550 /* Pods */,
-				378E8BAA21C729D00053D439 /* Dentaku copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -417,6 +415,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M82FLD6C75;
 				INFOPLIST_FILE = Dentaku/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -433,9 +432,11 @@
 			baseConfigurationReference = A9319688E5AF9A67392F2FF0 /* Pods-Dentaku.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M82FLD6C75;
 				INFOPLIST_FILE = Dentaku/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
